@@ -9,9 +9,12 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-
+import ProjectDetails from "./components/projectDetails";
 import { RouterProvider, Routes, createBrowserRouter } from "react-router-dom";
 import Layout from "./components/Layout";
+
+
+const projekat = [{link:"/evidencijaProjekata.png", alt:"Evidencija projekata"}]
 
 const ruter = createBrowserRouter([
   {
@@ -34,6 +37,10 @@ const ruter = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
+      {
+        path:"projectDetails/:id",
+        element: <ProjectDetails projekat={projekat[0]} />
+      }
     ],
   },
 ]);
