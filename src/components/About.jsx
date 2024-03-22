@@ -1,6 +1,9 @@
 import React from "react";
 
 const About = () => {
+
+  document.title = "About - Muratovic Belmin"
+
   return (
     <>
       <div className="bg-zinc-800 flex flex-col items-center pb-14">
