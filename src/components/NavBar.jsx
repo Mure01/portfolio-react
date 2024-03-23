@@ -7,10 +7,16 @@ const NavBar = () => {
     <>
       <nav className="flex bg-white justify-around py-2 border-b-2 border-sky-700 items-center">
         <div className="flex items-center ">
+        <a href="/">
+          
           <img className="h-16" src="/avatar.png"></img>
+          </a>
+          <a href="/">
+
           <h1 className=" text-4xl">
             Portfo<span className="text-sky-700">lio</span>
           </h1>
+          </a>
         </div>
 
         <i

@@ -44,7 +44,7 @@ const Projects = () => {
           setisSelected(true)
           setselectedProject({
                 title: "Chat media",
-                desc: "Chat media is a basic social networking platform I developed, which could also be described as a community interaction hub. It allows users to create their profile, and engage in real-time conversations with any other user. This project highlights my ability to create interactive and user-friendly environments, handle real-time data, and manage user relationships.",                viewSite: "https://friends-chat-a8iu.onrender.com",
+                desc: "Chat media is a basic social networking platform I developed, which could also be described as a community interaction hub. It allows users to create their profile, and engage in real-time conversations with any other user. This project highlights my ability to create interactive and user-friendly environments, handle real-time data, and manage user relationships.",
                 repo: "https://github.com/Mure01/react-chat",
                 stack: ["react", "node", "mongodb"]
             }) 
@@ -66,15 +66,15 @@ const Projects = () => {
         </div>
       </div>
 
-    <div className="flex flex-col sm:flex-row items-start mt-3 px-1 sm:px-0 sm:mt-10 justify-around ">
+    <div className="flex flex-col sm:flex-row items-start mt-3 px-5 sm:px-0 sm:mt-10 justify-around ">
     {
     //Prikaz samo teksta za naslove projekata
    }
-      <div  className="sm:max-w-1/5 sm:px-5 text-left border-t-2 border-l-2 rounded-3xl shadow-2xl p-3 sm:p-10 border-sky-700 
+      <div  className="w-full sm:max-w-[30%] sm:px-5 text-left border-t-2 border-l-2 rounded-3xl shadow-2xl p-3 sm:p-10 border-sky-700 
        flex  flex-col justify-between items-center  flex-wrap">
         {projekti.map((projekat,i) => {
           return (
-                  <p key={projekat} onClick={() => getData(i)} className=" bottom-0 sm:text-lg sm:px-10 uppercase font-sans tracking-wider w-full text-left  py-2 ">
+                  <p key={projekat} onClick={() => getData(i)} className="cursor-pointer bottom-0 sm:text-lg sm:px-10 uppercase font-sans tracking-wider w-full text-left  py-2 ">
                     {projekat}
                   </p>
           );
@@ -84,7 +84,7 @@ const Projects = () => {
         {//tekst koji opisuje projekat
         }
 {isSelected &&
-        <div className="sm:w-1/2 mt-3 sm:mt-0 ">
+        <div className="sm:w-1/2 mt-3 sm:mt-0  ">
         {<ProjectsDetails selectedProject = {selectedProject} />}
         </div>
 }
