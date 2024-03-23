@@ -7,8 +7,11 @@ const Projects = () => {
   const projekti = ['Project management system', 'Furniture site', 'WEATHER FORECAST APP  ', 'Chat media'  ];
   const [selectedProject, setselectedProject] = useState({})
   const [isSelected, setisSelected] = useState(false)
+  const [animate, setAnimate] = useState(false)
+  const animateDivRef = useRef(null);
 
   const getData = (index) => {
+    setAnimate(!animate)
     switch (index) {
         case 0:
           setisSelected(true)
@@ -70,11 +73,12 @@ const Projects = () => {
     {
     //Prikaz samo teksta za naslove projekata
    }
-      <div  className="w-full sm:max-w-[30%] sm:px-5 text-left border-t-2 border-l-2 rounded-3xl shadow-2xl p-3 sm:p-10 border-sky-700 
-       flex  flex-col justify-between items-center  flex-wrap">
+      <div  className={ isSelected ?
+       "sm:animate-fade-left w-full sm:max-w-[30%] sm:px-5 text-left border-t-2 border-l-2 rounded-3xl shadow-2xl p-3 sm:p-10 border-sky-700 flex  flex-col justify-between items-center  flex-wrap":
+       "animate-fade-up w-full sm:max-w-[30%] sm:px-5 text-left border-t-2 border-l-2 rounded-3xl shadow-2xl p-3 sm:p-10 border-sky-700 flex  flex-col justify-between items-center  flex-wrap"}>
         {projekti.map((projekat,i) => {
           return (
-                  <p key={projekat} onClick={() => getData(i)} className="cursor-pointer bottom-0 sm:text-lg sm:px-10 uppercase font-sans tracking-wider w-full text-left  py-2 ">
+                  <p key={projekat} onClick={() => getData(i)} className="hover:bg-sky-700 hover:text-white cursor-pointer bottom-0 sm:text-lg sm:px-10 uppercase font-sans tracking-wider w-full text-left  py-2 ">
                     {projekat}
                   </p>
           );
@@ -83,12 +87,13 @@ const Projects = () => {
 
         {//tekst koji opisuje projekat
         }
+
 {isSelected &&
-        <div className="sm:w-1/2 mt-3 sm:mt-0  ">
+        <div className={animate ? 'sm:w-1/2 mt-3 sm:mt-0 animate-fade-up' : ' sm:w-1/2 mt-3 sm:mt-0 animate-fade-down'} id="animateDiv" ref={animateDivRef}>
         {<ProjectsDetails selectedProject = {selectedProject} />}
         </div>
 }
-      </div>
+          </div>
     </>
   );
 };

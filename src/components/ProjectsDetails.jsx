@@ -3,7 +3,7 @@ import React from 'react'
 const ProjectsDetails = ({selectedProject}) => {
     return (
         <>
-        <div className='border-t-2 font-sans border-sky-700 rounded-2xl p-2 sm:p-5 shadow-2xl'>
+        <div className=' border-t-2 font-sans border-sky-700 rounded-2xl p-2 sm:p-5 shadow-2xl'>
             <h1 className='uppercase pt-2 sm:pt-0 pb-1 sm:px-2 rounded-lg font-semibold text-lg sm:text-2xl mb-3 border-b-2 text-center border-sky-900 sm:w-fit'>{selectedProject.title}</h1>
 
             <p className= ' px-3 sm:pr-5 pb-5 text-justify sm:leading-7 sm:text-lg'>
