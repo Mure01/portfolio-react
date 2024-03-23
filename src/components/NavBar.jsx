@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { Link, UNSAFE_LocationContext, useLocation } from "react-router-dom";
+import cv from '/cv.pdf'
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const { location } = useContext(UNSAFE_LocationContext);
@@ -71,13 +72,17 @@ const NavBar = () => {
 
         <ul className="hidden sm:flex gap-5 text-xl">
           <li>
-            <i className="fa fa-facebook text-sky-700"></i>
+          <a href="https://github.com/Mure01" target="_blank">
+            <i className="fa fa-github text-sky-700"></i>
+          </a>
           </li>
           <li>
-            <i className="fa fa-instagram text-red-600"></i>
+            <a download='Muratovic-Belmin-CV' href={cv} className="text-sky-700">CV</a>
           </li>
           <li>
+          <a href="https://www.linkedin.com/in/belmin-muratovic-89b018209/" target="_blank">
             <i className="fa fa-linkedin text-sky-700"></i>
+            </a>
           </li>
         </ul>
       </nav>
@@ -132,13 +137,17 @@ const NavBar = () => {
           <ul className="flex w-full items-center justify-around pt-5">
 
           <li>
-            <i className="fa fa-facebook text-sky-700"></i>
+            <a href="https://github.com/Mure01" target="_blank"> 
+            <i className="fa fa-github text-sky-700"></i>
+            </a>
           </li>
           <li>
-            <i className="fa fa-instagram text-red-600"></i>
+          <a download='Muratovic-Belmin-CV' href={cv} className="text-sky-700">CV</a>
           </li>
           <li>
+            <a href="https://www.linkedin.com/in/belmin-muratovic-89b018209/" target="_blank">
             <i className="fa fa-linkedin text-sky-700"></i>
+            </a>
           </li>
           </ul>
           </li>
