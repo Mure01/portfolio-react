@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
@@ -13,12 +13,12 @@ const Home = () => {
           </p>
         </div>
 
-          <a href="/contact">
+          <Link to="/contact">
         <button className="text-white mt-10 sm:mt-12 uppercase text-xl ml-[10%] py-3 px-5 rounded-md bg-sky-700 w-fit">
 
           Contact me
         </button>
-          </a>
+          </Link>
       </div>
     </>
   );

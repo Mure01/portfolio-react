@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from 'react-router-dom'
 const About = () => {
 
   document.title = "About - Muratovic Belmin"
@@ -21,12 +21,12 @@ const About = () => {
           need an engagement of a person like me, contact me!
         </p>
 
-        <a
-          href="/contact"
+        <Link
+          to="/contact"
           className="text-sky-700 uppercase border-2 border-sky-700 rounded-full hover:bg-sky-700 hover:text-white py-2 tracking-widest px-7"
         >
           Contact me
-        </a>
+        </Link>
       </div>
       <div className="flex flex-col py-14">
         <h1 className=" text-4xl sm:text-6xl text-center text-sky-700 font-bold">
@@ -84,14 +84,14 @@ const About = () => {
           </div>
         </div>
 
-        <a
-          href="/projects"
-          className="mt-10 w-fit m-auto 
+        <Link
+          to="/projects"
+          className="mt-10 w-fit m-auto border-2 border-white
     hover:bg-white hover:text-sky-700 hover:border-2 hover:border-sky-700
     text-white uppercase text-2xl bg-sky-700 py-3 px-7 rounded-full tracking-wider"
         >
           Projects
-        </a>
+        </Link>
       </div>
 
       <div className="bg-sky-700 text-white">
@@ -126,12 +126,12 @@ const About = () => {
               <p>Elementary School "Vitez"</p>
             </div>
           </div>
-          <a
-            href="/contact"
+          <Link 
+            to='/contact'
             className="bg-yellow-600 uppercase py-3 px-7 my-5 rounded-full text-xl"
           >
             COntact me
-          </a>
+          </Link>
         </div>
       </div>
     </>
